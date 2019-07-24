@@ -8,7 +8,7 @@
         <h2>New Mentor</h2>
     
         <form method="POST" class="Mentor-form">{% csrf_token %}
-            {{  form.as_p  }}
+            {{  formMentor.as_p  }}
             <button type='submit' class="save btn btn-default">Save</button>
         </form>
     </div>

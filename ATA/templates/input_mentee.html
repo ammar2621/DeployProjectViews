@@ -10,7 +10,7 @@
         <h2>New Mentee</h2>
     
         <form method="POST" class="Mentee-form">{% csrf_token %}
-            {{  form.as_p  }}
+            {{  formMentee.as_p  }}
             <button type='submit' class="save btn btn-default">Save</button>
         </form>
     </div>

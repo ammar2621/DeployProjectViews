@@ -28,35 +28,35 @@ def input_blog(request):
     if request.method == "POST":
         form = BlogForm(request.POST)
         if form.is_valid():
-            post = form.save(commit=false)
+            post = form.save(commit=False)
             post.author = request.user
             post.save()
     else:
         form = BlogForm()
-    return render(request, 'input_blog.html', {'form': form})
+    return render(request, 'input_blog.html', {'formBlog': form})
 
 def input_mentee(request):
     if request.method == "POST":
         form = MenteeForm(request.POST)
         if form.is_valid():
-            post = form.save(commit=false)
+            post = form.save(commit=False)
             post.author = request.user
             post.save()
     else:
         form = MenteeForm()
-    return render(request, 'input_mentee.html', {'form': form})
+    return render(request, 'input_mentee.html', {'formMentee': form})
 
 
 def input_mentor(request):
     if request.method == "POST":
         form = MentorForm(request.POST)
         if form.is_valid():
-            post = form.save(commit=false)
+            post = form.save(commit=False)
             post.author = request.user
             post.save()
     else:
         form = MentorForm()
-    return render(request, 'input_mentor.html', {'form': form})
+    return render(request, 'input_mentor.html', {'formMentor': form})
 
 
 def blog_detail(request, blog_id):
