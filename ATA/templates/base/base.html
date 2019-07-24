@@ -1,0 +1,69 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" >
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class="row box-top">
+                <div class="col-md-12 text-right">
+                    <nav class="navbar navbar-light bg-light">
+                        <div>
+                            <a class="navbar-brand" href="{% url 'home' %}">Alpha Tech Academy</a>
+                        </div>
+                        <div>
+                            <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+                            <a class="navbar-brand" href="{% url 'blog' %}">Blog</a>
+                            <a class="navbar-brand" href="{% url 'mentor' %}">Mentor</a>
+                            <a class="navbar-brand" href="{% url 'mentee' %}">Mentee</a>
+                            <a class="navbar-brand" href="{% url 'author' %}">Author</a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row justify-content-center box-fit">
+                <div class="col-md-6">
+                    <div class='text-center logo'>
+                        <img src="https://i.postimg.cc/mrRR4MFM/alpha-logo.png" alt="logo">
+                    </div>
+                    <div class="text-center para">
+                        <h2 class="judul">Alpha Tech Academy</h2>
+                    </div>
+                    <div class="text-center para">
+                        <p>Alpha Tech Academy is a tech talent incubator that gives everyone (even non IT background) a chance to be a professional Tech Talent within 3 months. Contact Person: Email: academy@alphatech.id Mobile Phone: 0877 9609 9530</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    {%  block content  %}
+
+    {%  endblock  %}
+    <footer>
+        <div class="container-fluid">
+            <div class="row footer-top">
+                <div class="col-md-12 text-center">
+                    <h4>Our Product: <img src="https://i.postimg.cc/XY93txX4/logo-grey-alphapay.png" alt="logoalphabill"> <img src="https://i.postimg.cc/9fjXfKsD/logo-grey-sepulsa.png" alt="logosepulsa"> <img src="https://i.postimg.cc/gJ2WXWs2/logo-grey-alphabill.png" alt="logoalphapay"></h4>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row footer-down">
+                <div class="col-md-12 word-putih text-center">
+                    <h6>Contact Person: Mobile Phone: 0877 9609 9530. Email:  <a href="https://www.alterra.id/">academy@alphatech.id</a></h6>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,49 @@
+{%  extends 'base/base.html'  %}
+{%  load static  %}
+
+{% block content  %}
+
+<body>
+    <br>
+    <br>
+
+    <div class="text-center">
+        <h3>Our Mentee</h3>
+    </div>
+
+    <br>
+
+    <div class="container text-center">
+        {%  for mentee in mentees  %}
+        <div class="row text-right">
+            <div class="col-md-5 menteetext">
+                <img src="{{  mentee.profil  }}" width="50%" alt="">
+            </div>
+            <div class="=col-md-7 text-left">
+                {{  mentee.nama  }}
+                <br>
+                {{  mentee.quotes  }}                    
+            </div>
+        </div>
+        {%  endfor  %}
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+{%  endblock %}
+
+<!-- {% for hewan in hewans %}
+<tr>
+    <td>{{ forloop.counter }}</td>
+    <td>{{ hewan.nama }}</td>
+    <td>{{ hewan.species }}</td>
+    <td>{{ hewan.berat }}</td>
+    <td>{{ hewan.umur }}</td>
+</tr>
+{% endfor %} -->

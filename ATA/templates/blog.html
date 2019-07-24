@@ -1,0 +1,82 @@
+{%  extends 'base/base.html'  %}
+{%  load static  %}
+
+{% block content  %}
+
+
+<body>
+    <br>
+    <br>
+
+    <!-- <div class="text-center">
+        <h3>Our Mentee</h3> -->
+    </div>
+
+    <br>
+
+    <div class="container">
+        {%  for blog in blogs  %}
+        <div class="row  justify-content-center">
+            <div class="col-md-8 text-center">
+                <div class='fotoblog'>
+                    <img width="730px" src="{{  blog.foto  }}"  alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="row justify-content-center">
+                    <div class="col-md-6 text-left">
+                        {{  blog.tanggal  }}
+                    </div>
+                    
+                    <div class="col-md-6 text-right">
+                        {{  blog.comment  }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container text-left">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2>
+                    {{ blog.judul  }}
+                </h2>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container text-left">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                {{ blog.deskripsi|safe|truncatewords:"50"|linebreaks }}
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container text-left">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <a href="{% url 'blog_detail' blog.id %}">Baca selengkapnya</a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>    
+        {%  endfor  %}
+    </div>
+    <br>
+    <br>
+    <br>
+
+
+</body>
+
+{%  endblock %}
+    
